@@ -38,6 +38,7 @@ import androidx.navigation.NavType
 import androidx.navigation.navArgument
 import com.example.compose.rally.ui.accounts.AccountsScreen
 import com.example.compose.rally.ui.bills.BillsScreen
+import androidx.navigation.navDeepLink
 
 
 /**
@@ -105,7 +106,8 @@ fun RallyApp() {
                 }
                 composable(
                     route = SingleAccount.routeWithArgs,
-                    arguments = SingleAccount.arguments
+                    arguments = SingleAccount.arguments,
+                    deepLinks = SingleAccount.deepLinks
                 ) { navBackStackEntry ->
                     // Retrieve the passed argument
                     val accountType =
